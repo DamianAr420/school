@@ -1,0 +1,66 @@
+.newUser {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+.newUser form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(114, 113, 113, 0.397);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.newUser form input {
+    width: 60%;
+    height: 30px;
+    margin-top: 5%;
+    font-size: 120%;
+    border: 0;
+    border-bottom: 2px solid var(--main-color);
+    background-color: transparent;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.newUser form input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--secondary-color);
+    box-shadow: 0px 0px 4px 0px var(--boxsh-color);
+}
+
+.newUser form input:first-child {
+    margin-top: 0;
+}
+
+.newUser form select {
+    width: 60%;
+    height: 30px;
+    font-size: 120%;
+    border: 1px solid var(--main-color);
+    margin: 5px;
+}
+
+.newUser form button {
+    width: 80%;
+    height: 60px;
+    font-size: 140%;
+    font-weight: bold;
+    background-color: #73ff00;
+    border: 0;
+    border-radius: 25px;
+}

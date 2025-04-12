@@ -1,0 +1,132 @@
+.profile {
+    color: var(--bcg-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableBody {
+    background-color: var(--main-color);
+    width: 50%;
+    min-width: 320px;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px var(--boxsh-color);
+    text-align: center;
+}
+
+.tableBody h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.profile table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.profile table th,
+.profile table td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    text-align: right;
+}
+
+.profile table th {
+    background-color: var(--secondary-color);
+    color: var(--bcg-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.profile table thead {
+    cursor: pointer;
+}
+
+.profile table thead th {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.profile table td {
+    color: var(--bcg-color);
+    font-size: 1.2rem;
+}
+
+.profile table td:nth-child(1) {
+    width: 30%;
+}
+
+.profile table td:nth-child(2) {
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.profile table td:nth-child(2):hover {
+    color: var(--text-color-second);
+    transition: 0.5s;
+    background-color: var(--secondary-color-second);
+}
+
+.profile table tfoot td{
+    background-color: var(--secondary-color);
+    color: var(--bcg-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom: 0;
+}
+
+.profile input {
+    padding: 10px;
+    width: 80%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--bcg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+.profile input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.profile button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+    color: var(--bcg-color);
+    border: 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.profile button:hover {
+    background-color: var(--secondary-color-second);
+    transition: 0.5s;
+    box-shadow: 0px 0px 15px var(--bcg-color);
+}
+
+.profile button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+    .tableBody {
+        width: 90%;
+    }
+}

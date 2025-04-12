@@ -1,0 +1,215 @@
+.gradesBox {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .leftSide {
+    width: 20%;
+    height: 90%;
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 10px 1px var(--boxsh-color);
+    border-radius: 25px;
+    margin: 0 auto;
+  }
+  
+  .subjects {
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 1px var(--boxsh-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subjects:first-child {
+    margin-top: 20px;
+  }
+  
+  .subjects:hover,
+  .subjects.active {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  .rightSide {
+    width: 70%;
+    height: calc(90% - 40px);
+    margin: 0 auto;
+    background-color: var(--main-color);
+    text-align: center;
+    right: 0;
+    box-shadow: 0px 0px 10px 1px var(--boxsh-color);
+    border-radius: 25px;
+    padding: 20px 0;
+    overflow-y: auto;
+  }
+  
+  .subjectHeader {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .subjectHeader h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 0 auto;
+  }
+  
+  .rightSideBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 5%;
+  }
+  
+  .grades {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: var(--bcg-color);
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    opacity: 0;
+    animation: fadeInUp 0.3s ease forwards;
+  }
+  
+  .grades:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px 2px var(--boxsh-color);
+    background-color: var(--secondary-color-second);
+  }
+  
+  .gradesGrade {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0px 0px 3px 0px var(--boxsh-color);
+    color: var(--text-color);
+    transition: filter 0.2s ease;
+    text-align: center;
+  }
+  
+  .gradesTitle {
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    margin: 5px 5px 5px 0;
+    background-color: rgb(0, 72, 131);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 0px 3px 0px var(--boxsh-color);
+    color: var(--text-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .grades:hover .gradesGrade {
+    filter: brightness(1.1);
+  }
+  
+  .grades:hover .gradesTitle {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+  
+  .noGrades {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-color-second);
+    padding: 40px 0;
+    opacity: 0.7;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(15px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gradesBox {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      grid-template-columns: 11fr;
+    }
+  
+    .leftSide {
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      align-items: center;
+      gap: 10px;
+      border-radius: 0;
+      margin: 0;
+      padding: 20px 0;
+      box-shadow: none;
+    }
+  
+    .subjects {
+      display: inline-block;
+      width: auto;
+      padding: 5px 15px;
+      flex-shrink: 0;
+      margin: 0;
+      margin-right: 10px;
+    }
+  
+    .subjects:first-child {
+      margin-left: 10px;
+    }
+  
+    .rightSide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      margin: 0;
+      box-shadow: none;
+      overflow-y: auto;
+    }
+  
+    .rightSideBox {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0 15px;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    .rightSideBox {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1700px) {
+    .rightSideBox {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

@@ -1,0 +1,97 @@
+.logBody {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, orange, yellow, red);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s infinite linear;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.logBox {
+    width: 90%;
+    height: 40%;
+    max-width: 500px;
+    padding: 40px 20px;
+    border: 2px solid #fff;
+    background-color: #ffffff31;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logBox p {
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px black;
+    color: #fff;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.logBox p::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.logBox input {
+    width: 80%;
+    max-width: 400px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    background-color: #ffffff48;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #000;
+    outline: none;
+}
+
+.logBox input::placeholder {
+    color: #444;
+}
+
+.logBox button {
+    width: 60%;
+    max-width: 300px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: rgb(172, 255, 47);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.logBox button:hover {
+    background-color: rgb(157, 255, 0);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.error {
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.7);
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}

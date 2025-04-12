@@ -1,0 +1,72 @@
+.gradeDetailsOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.gradeDetailsBox {
+  background: var(--bcg-color);
+  padding: 25px 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 0 20px 3px var(--boxsh-color);
+  color: var(--text-color);
+  animation: slideUp 0.4s ease forwards;
+  position: relative;
+}
+
+.gradeDetailsBox h2 {
+  margin-bottom: 20px;
+  color: var(--text-color-second);
+  text-align: center;
+}
+
+.gradeDetailsBox p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.gradeDetailsBox p strong {
+  color: var(--text-color-second);
+}
+
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.closeButton:hover {
+  background: var(--secondary-color-second);
+  transform: scale(1.05);
+}
+
+/* ANIMACJE */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

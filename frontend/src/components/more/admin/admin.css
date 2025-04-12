@@ -1,0 +1,61 @@
+.adminBody {
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.adminBox {
+    background-color: var(--bcg-color);
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px var(--main-color);
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    color: var(--text-color);
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto;
+}
+
+.adminBox:hover {
+    box-shadow: 0px 0px 10px 5px var(--secondary-color);
+}
+
+.adminBox h1 {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.adminBox p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .adminBody {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .adminBox {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .adminBody {
+        grid-template-columns: 1fr;
+        overflow: auto;
+    }
+    .adminBox {
+        margin-top: 30px;
+    }
+}

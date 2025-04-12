@@ -1,0 +1,134 @@
+.lessonsPlanBody {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+  font-size: 120%;
+  color: var(--text-color);
+  padding: 20px;
+  width: 100vw;
+  height: 90vh;
+  overflow: auto;
+}
+
+.lessonItem {
+  padding: 10px 15px;
+  margin: 15px auto;
+  background-color: var(--bcg-color);
+  border-radius: 15px;
+  max-width: 320px;
+  box-shadow: 0 0 10px 2px var(--secondary-color);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  overflow: auto;
+}
+
+.lessonItem:hover {
+  transform: translateY(-3px);
+  background-color: var(--secondary-color-second);
+  color: var(--text-color);
+}
+
+.lessonItem strong {
+  color: var(--text-color-second);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.lessonItemDate {
+  background-color: var(--main-color);
+  width: fit-content;
+  margin: 10px auto 0 auto;
+  border-radius: 25px;
+  padding: 5px 15px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  box-shadow: 0 0 5px 1px var(--boxsh-color);
+}
+
+.calendar {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+  background-color: var(--bcg-color);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 2px var(--boxsh-color);
+  padding: 10px;
+}
+
+.react-calendar {
+  background-color: var(--bcg-color);
+  border: none;
+  color: var(--text-color);
+}
+
+.react-calendar__tile {
+  background: none;
+  color: var(--text-color);
+  border-radius: 10px;
+}
+
+.react-calendar__tile:enabled:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.react-calendar__tile--now {
+  background: var(--main-color);
+  color: var(--text-color);
+}
+
+.react-calendar__tile--active {
+  background: var(--secondary-color-second);
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+    body, html {
+      overflow-x: hidden;
+    }
+  
+    .lessonsPlanBody {
+      grid-template-columns: 1fr;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .calendar {
+      max-width: 90%;
+      width: 90%;
+      scale: 1 !important;
+      margin-top: 20px;
+    }
+  
+    .lessonItem {
+      max-width: 90%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
+    }
+}
+
+@media screen and (min-width: 916px) {
+  .calendar {
+    scale: 1.2;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1357px) {
+  .calendar {
+    scale: 1.5;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1577px) {
+  .calendar {
+    scale: 1.8;
+    margin-top: 150px;
+  }
+}
+  
